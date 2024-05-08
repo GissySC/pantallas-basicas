@@ -49,7 +49,7 @@ function ValidateForm() {
 function ReadData() {
     let listPeople;
 
-    if(localStorage.getItem('listPeople') == null) {
+    if (localStorage.getItem('listPeople') == null) {
         listPeople = [];
     } else {
         listPeople = JSON.parse(localStorage.getItem('listPeople'));
@@ -58,15 +58,13 @@ function ReadData() {
     let html = "";
 
     listPeople.forEach(function(element, index) {
-        html += "<tr id='row_"+index+"'>";
-        html += "<td><input type='text' class='form-control' value='" + element.name + "' id='editName_"+index+"' disabled></td>";
-        html += "<td><input type='text' class='form-control' value='" + element.lastName + "' id='editLastName_"+index+"' disabled></td>";
-        html += "<td><input type='email' class='form-control' value='" + element.email + "' id='editEmail_"+index+"' disabled></td>";
-        html += "<td><input type='tel' class='form-control' value='" + element.phone + "' id='editPhone_"+index+"' disabled></td>";
-        html += "<td><input type='text' class='form-control' value='" + element.country + "' id='editCountry_"+index+"' disabled></td>";
-        html += "<td><input type='text' class='form-control' value='" + element.city + "' id='editCity_"+index+"' disabled></td>";
-        html += "<td><button onclick='editData("+ index +")' class='btn btn-warning'>Editar</button></td>";
-        html += "<td><button onclick='deleteData("+ index +")' class='btn btn-danger'>Eliminar</button></td>";
+        html += "<tr>";
+        html += "<td onclick='viewUser("+ index +", \"name\")'>" + element.name + "</td>";
+        html += "<td onclick='viewUser("+ index +", \"lastName\")'>" + element.lastName + "</td>";
+        html += "<td onclick='viewUser("+ index +", \"email\")'>" + element.email + "</td>";
+        html += "<td onclick='viewUser("+ index +", \"phone\")'>" + element.phone + "</td>";
+        html += "<td onclick='viewUser("+ index +", \"country\")'>" + element.country + "</td>";
+        html += "<td onclick='viewUser("+ index +", \"city\")'>" + element.city + "</td>";
         html += "</tr>";
     });
 
@@ -177,3 +175,17 @@ function deleteData(index) {
     ReadData();
 }
 
+function viewUser(index, property) {
+    let listPeople = JSON.parse(localStorage.getItem('listPeople'));
+    let selectedUser = listPeople[index];
+
+    // Crea la URL con los parámetros del usuario seleccionado
+    let queryString = "?";
+    for (let key in selectedUser) {
+        queryString += key + "=" + encodeURIComponent(selectedUser[key]) + "&";
+    }
+    queryString = queryString.slice(0, -1); // Elimina el último "&"
+
+    // Redirige a la página con los datos del usuario
+    window.location.href = "userDetails.html" + queryString;
+}
