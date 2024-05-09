@@ -186,5 +186,5 @@ function viewUser(index) {
     }
     queryString = queryString.slice(0, -1); 
 
-    window.location.href = "detalles-usuario.html" + queryString;
+    window.location.href = "/detalle/detalles-usuario.html" + queryString;
 }

@@ -19,5 +19,4 @@ function loadUserDetails() {
     document.getElementById('userDetails').innerHTML = userDetailsHtml;
 }
 
-// Llamamos a la función para cargar los detalles del usuario al cargar la página
 loadUserDetails();
