@@ -1,4 +1,4 @@
-body {
+/*body {
    background-color: #444444;
     color: white;
 }
@@ -9,7 +9,7 @@ body {
     width: 80vw;
     background-color: black;
     border-radius: 10px;
-    text-align: center; /* Contenido centrado */
+    text-align: center; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,8 +22,35 @@ h1 {
 button {
     margin-top: 20px;
     font-weight: bold;
-}
+}*/
 
 .form-label {
     font-weight: bolder;
+}
+
+body {
+    background-color: #444;
+}
+
+input {
+    margin: 10px 0;
+}
+
+.form-control,
+.form-select {
+    border: 0;
+}
+
+.form-control:focus,
+.form-select:focus {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.bg-form {
+    background-color: black;
+}
+
+#btnAdd{
+    margin: 20px 0;
 }

@@ -8,41 +8,58 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container text-center">
-        <h1>Registro</h1>
-        <form action="./tabla/tabla.html" method="get" onsubmit="return ValidateForm()" class="row justify-content-center">
-            <div class="col-md-6">
-                <div class="mb-3">
-                    <label for="inputName" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="inputName">
+    <div class="container mt-3 pt-3 text-center">
+      <div class="row">
+        <div class="col-12">
+          <div class="card p-3 bg-form">
+            <form action="./tabla/tabla.html" method="get" onsubmit="return ValidateForm()" class="row justify-content-center">
+              <div class="col-12">
+                <h1 class="text-center fw-bolder text-white mt-3">Registro</h1>
+                <hr>
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" autocomplete="off" class="form-control bg-light" id="inputName" placeholder="Nombre">
+                  <label for="inputName" class="form-label">Nombre</label>                 
                 </div>
-                <div class="mb-3">
-                    <label for="inputEmail" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="inputEmail">
+              </div>   
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" autocomplete="off" class="form-control bg-light" id="inputLastName" placeholder="Apellidos">
+                  <label for="inputLastName" class="form-label">Apellidos</label>
                 </div>
-                <div class="mb-3">
-                    <label for="inputCountry" class="form-label">País</label>
-                    <input type="text" class="form-control" id="inputCountry">
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="email" class="form-control" autocomplete="off" class="form-control bg-light" id="inputEmail" placeholder="Email">
+                  <label for="inputEmail" class="form-label">Email</label>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="mb-3">
-                    <label for="inputLastName" class="form-label">Apellidos</label>
-                    <input type="text" class="form-control" id="inputLastName">
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="tel" class="form-control" autocomplete="off" class="form-control bg-light" id="inputPhone" placeholder="Teléfono">
+                  <label for="inputPhone" class="form-label">Teléfono</label>
                 </div>
-                <div class="mb-3">
-                    <label for="inputPhone" class="form-label">Teléfono</label>
-                    <input type="tel" class="form-control" id="inputPhone">
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" autocomplete="off" class="form-control bg-light" id="inputCountry" placeholder="País">
+                  <label for="inputCountry" class="form-label">País</label>
                 </div>
-                <div class="mb-3">
-                    <label for="inputCity" class="form-label">Ciudad</label>
-                    <input type="text" class="form-control" id="inputCity">
+              </div>
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control" autocomplete="off" class="form-control bg-light" id="inputCity" placeholder="Ciudad">
+                  <label for="inputCity" class="form-label">Ciudad</label>
                 </div>
-            </div>
-            <div class="d-grid gap-2 col-12 mx-auto">
+              </div>      
+              <div class="d-grid gap-2 col-12 mx-auto">
                 <button type="submit" class="btn btn-outline-light" id="btnAdd" onclick="AddData()">Enviar datos</button>
-            </div>
-        </form>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>   
     </div>
 
     <script src="tabla/tabla.js"></script>
