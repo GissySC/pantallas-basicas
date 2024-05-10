@@ -14,7 +14,7 @@
     <div class="container">
         <div class="container mb-5">
             <div class="row">
-                <form>
+                <form action="./tabla/tabla.html" method="get" onsubmit="return ValidateForm()">
                     <div class="mb-3">
                       <label for="inputName" class="form-label">Nombre</label>
                       <input type="text" class="form-control" id="inputName">
@@ -40,7 +40,7 @@
                         <input type="text" class="form-control" id="inputCity">
                     </div>
                     <div class="d-grid gap-2 col-6 mx-auto">
-                    <button type="submit" class="btn btn-primary" id="btnAdd" href="./tabla/tabla.html" onclick="AddData()">Enviar datos</button>
+                    <button type="submit" class="btn btn-primary" id="btnAdd" onclick="AddData()">Enviar datos</button>
                     </div>
                   </form>
             </div>
@@ -49,7 +49,7 @@
 
 
 
-
+    <script src="tabla/tabla.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
