@@ -106,6 +106,7 @@ function ReadData() {
         html += "<td><button onclick='editData("+ index +")' class='btn btn-warning'>Editar</button></td>";
         html += "<td><button onclick='deleteData("+ index +")' class='btn btn-danger'>Eliminar</button></td>";
         html += "<td><button onclick='viewUser("+ index +")' class='btn btn-primary'>Ver</button></td>";
+
         html += "</tr>";
     });
 
@@ -188,3 +189,5 @@ function viewUser(index) {
 
     window.location.href = "/detalle/detalles-usuario.html" + queryString;
 }
+
+
