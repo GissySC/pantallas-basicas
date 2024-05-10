@@ -97,15 +97,15 @@ function ReadData() {
 
     listPeople.forEach(function(element, index) {
         html += "<tr id='row_"+index+"'>";
-        html += "<td><input type='text' class='form-control' value='" + element.name + "' id='editName_"+index+"' disabled></td>";
-        html += "<td><input type='text' class='form-control' value='" + element.lastName + "' id='editLastName_"+index+"' disabled></td>";
-        html += "<td><input type='email' class='form-control' value='" + element.email + "' id='editEmail_"+index+"' disabled></td>";
-        html += "<td><input type='tel' class='form-control' value='" + element.phone + "' id='editPhone_"+index+"' disabled></td>";
-        html += "<td><input type='text' class='form-control' value='" + element.country + "' id='editCountry_"+index+"' disabled></td>";
-        html += "<td><input type='text' class='form-control' value='" + element.city + "' id='editCity_"+index+"' disabled></td>";
-        html += "<td><button onclick='editData("+ index +")' class='btn btn-warning'>Editar</button></td>";
-        html += "<td><button onclick='deleteData("+ index +")' class='btn btn-danger'>Eliminar</button></td>";
-        html += "<td><button onclick='viewUser("+ index +")' class='btn btn-primary'>Ver</button></td>";
+        html += "<td class='table-dark'><input type='text' class='form-control' value='" + element.name + "' id='editName_"+index+"' disabled></td>";
+        html += "<td class='table-dark'><input type='text' class='form-control' value='" + element.lastName + "' id='editLastName_"+index+"' disabled></td>";
+        html += "<td class='table-dark'><input type='email' class='form-control' value='" + element.email + "' id='editEmail_"+index+"' disabled></td>";
+        html += "<td class='table-dark'><input type='tel' class='form-control' value='" + element.phone + "' id='editPhone_"+index+"' disabled></td>";
+        html += "<td class='table-dark'><input type='text' class='form-control' value='" + element.country + "' id='editCountry_"+index+"' disabled></td>";
+        html += "<td class='table-dark'><input type='text' class='form-control' value='" + element.city + "' id='editCity_"+index+"' disabled></td>";
+        html += "<td class='table-dark'><button onclick='editData("+ index +")' class='btn btn-warning'>Editar</button></td>";
+        html += "<td class='table-dark'><button onclick='deleteData("+ index +")' class='btn btn-danger'>Eliminar</button></td>";
+        html += "<td class='table-dark'><button onclick='viewUser("+ index +")' class='btn btn-primary'>Ver</button></td>";
 
         html += "</tr>";
     });
