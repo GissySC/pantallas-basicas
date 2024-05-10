@@ -1,4 +1,3 @@
-// Agregamos una función para cargar los detalles del usuario
 function loadUserDetails() {
     const urlParams = new URLSearchParams(window.location.search);
     const name = urlParams.get('name');
@@ -8,14 +7,16 @@ function loadUserDetails() {
     const country = urlParams.get('country');
     const city = urlParams.get('city');
 
-    // Rellenamos los campos con los datos del usuario
-    document.getElementById('inputName').value = name;
-    document.getElementById('inputLastName').value = lastName;
-    document.getElementById('inputEmail').value = email;
-    document.getElementById('inputPhone').value = phone;
-    document.getElementById('inputCountry').value = country;
-    document.getElementById('inputCity').value = city;
+    let userDetailsHtml = `
+        <p><strong>Nombre:</strong> ${name}</p>
+        <p><strong>Apellidos:</strong> ${lastName}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Teléfono:</strong> ${phone}</p>
+        <p><strong>País:</strong> ${country}</p>
+        <p><strong>Ciudad:</strong> ${city}</p>
+    `;
+
+    document.getElementById('userDetails').innerHTML = userDetailsHtml;
 }
 
-// Llamamos a la función para cargar los detalles del usuario al cargar la página
 loadUserDetails();

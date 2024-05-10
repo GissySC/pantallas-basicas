@@ -105,6 +105,8 @@ function ReadData() {
         html += "<td><input type='text' class='form-control' value='" + element.city + "' id='editCity_"+index+"' disabled></td>";
         html += "<td><button onclick='editData("+ index +")' class='btn btn-warning'>Editar</button></td>";
         html += "<td><button onclick='deleteData("+ index +")' class='btn btn-danger'>Eliminar</button></td>";
+        html += "<td><button onclick='viewUser("+ index +")' class='btn btn-primary'>Ver</button></td>";
+
         html += "</tr>";
     });
 
@@ -174,3 +176,18 @@ function deleteData(index) {
 
     ReadData();
 }
+
+function viewUser(index) {
+    let listPeople = JSON.parse(localStorage.getItem('listPeople'));
+    let selectedUser = listPeople[index];
+
+    let queryString = "?";
+    for (let key in selectedUser) {
+        queryString += key + "=" + encodeURIComponent(selectedUser[key]) + "&";
+    }
+    queryString = queryString.slice(0, -1); 
+
+    window.location.href = "/detalle/detalles-usuario.html" + queryString;
+}
+
+
