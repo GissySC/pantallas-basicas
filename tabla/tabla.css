@@ -1,0 +1,31 @@
+body {
+    background-color: #444444; /* Fondo grisaceo oscuro */
+    color: black; /* Texto blanco */
+}
+
+.container {
+    margin: 100px auto;
+    padding: 20px;
+    width: 80vw;
+    background-color: black;
+    border-radius: 10px;
+    text-align: center; /* Contenido centrado */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+h1 {
+    color: white; /* Título blanco */
+    margin-bottom: 40px;
+}
+
+#tableData th,
+#tableData td {
+    border: 1px solid black;
+}
+
+table {
+    background-color: black;
+}
