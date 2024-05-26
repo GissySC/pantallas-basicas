@@ -30,10 +30,6 @@ h1 {
 table {
     background-color: black;
 }
-
-button {
-    margin: 3px;
-}
 .actions {
     display: flex;
     justify-content: space-between;
