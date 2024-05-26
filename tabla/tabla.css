@@ -1,6 +1,7 @@
 body {
     background-color: #444444; 
     color: black; 
+    box-sizing: border-box;
 }
 
 .container {
@@ -30,5 +31,56 @@ table {
     background-color: black;
 }
 
+button {
+    margin: 5px;
+}
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
 
-
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    tr {
+        margin: 0 0 1rem 0;
+    }
+    tr:nth-child(odd) {
+        background: #f2f2f2;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+    td:before {
+        position: absolute;
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: bold;
+    }
+    td:last-child {
+        padding-left: 8px;
+    }
+    .actions {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding-left: 0; 
+    }
+    .actions-header {
+        display: none;
+    }
+}
