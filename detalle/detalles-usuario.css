@@ -1,23 +1,22 @@
 body {
-    background-color: #444; /* Fondo grisaceo oscuro */
-    color: black; /* Texto blanco */
+    background-color: #444; 
+    color: black; 
 }
 
 .container {
     margin: 100px auto;
     padding: 20px;
     width: 50vw;
-    background-color: black; /* Contenedor negro */
+    background-color: black; 
     border-radius: 10px;
-    text-align: center; /* Contenido centrado */
+    text-align: center; 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .container p {
-    background-color: white; /* Fondo negro para los párrafos */
-    text-align: center;
+    background-color: white; 
     width: 30vw;
     padding: 10px;
     margin: 10px 0;
@@ -25,6 +24,16 @@ body {
 }
 
 h1 {
-    color: white; /* Título blanco */
+    color: white; 
     margin-bottom: 20px;
 }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .container {
+        width: 90%;
+    }
+
+    .container p {
+        width: 100%;
+    }
+  }
