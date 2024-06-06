@@ -1,3 +1,7 @@
+window.onload = function() {
+    ReadData();
+};
+
 function ValidateForm() {
     let name = document.getElementById('inputName').value;
     let lastName = document.getElementById('inputLastName').value;
@@ -7,17 +11,17 @@ function ValidateForm() {
     let city = document.getElementById('inputCity').value;
 
     if (name == "") {
-        alert('Campo obligatorio!');
+        alert('El nombre es obligatorio!');
         return false;
     }
 
     if (lastName == "") {
-        alert('Campo obligatorio!');
+        alert('El apellido es obligatorio!');
         return false;
     }
 
     if (email == "") {
-        alert('Campo obligatorio!');
+        alert('El email es obligatorio!');
         return false;
     } else if (!email.includes('@')) {
         alert('El correo no es válido.')
@@ -25,7 +29,7 @@ function ValidateForm() {
     }
 
     if (phone === "") {
-        alert('Campo obligatorio: Teléfono');
+        alert('El número de teléfono es obligatorio');
         return false;
     } else if (!/^\d+$/.test(phone)) {
         alert('El número de teléfono no es válido.');
@@ -33,12 +37,12 @@ function ValidateForm() {
     }
 
     if (country == "") {
-        alert('Campo obligatorio!');
+        alert('El país es obligatorio!');
         return false;
     }
 
     if (city == "") {
-        alert('Campo obligatorio!');
+        alert('La ciudad es obligatoria!');
         return false;
     } 
 
@@ -107,7 +111,7 @@ function ReadData() {
         html += "<div class='actions'>";
         html += "<button onclick='editData(" + index + ")' class='btn btn-warning'>Editar</button>";
         html += "<button onclick='deleteData(" + index + ")' class='btn btn-danger'>Eliminar</button>";
-        html += "<button onclick='viewUser(" + index + ")' class='btn btn-primary'>Ver</button>";
+        html += "<button onclick='viewUser(" + index + ")' class='btn btn-outline-primary'>Perfil</button>";
         html += "</div></td>";
         html += "</tr>";
     });
@@ -191,5 +195,9 @@ function viewUser(index) {
 
     window.location.href = "/detalle/detalles-usuario.html" + queryString;
 }
+
+
+
+
 
 

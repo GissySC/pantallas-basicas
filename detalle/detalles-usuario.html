@@ -9,9 +9,24 @@
 </head>
 <body>
     <div class="container">
-        <h1>Detalles de Usuario</h1>
-        <div id="userDetails"></div>
+        <div class="details">
+            <h1>Detalles Usuario</h1>
+            <div id="userDetails">
+                <!-- Detalles del usuario aquí -->
+            </div>
+        </div>
+        <div class="gallery">
+            <h1>Galería</h1>
+            <p id="emptyGalleryString">Aún no has subido ninguna imagen :(</p>
+            <div id="gallery" class="row mt-3">
+                <!-- Imágenes del usuario aquí -->
+            </div>
+            <label for="imageInput"><i class="fa-solid fa-upload fa-lg"></i></label>
+            <input type="file" id="imageInput" accept="image/*" multiple>
+            <button onclick="saveImages()" id="saveImages"><i class="fa-solid fa-floppy-disk fa-lg"></i> </button>
+        </div>
     </div>
+    <script src="https://kit.fontawesome.com/03de9b2034.js" crossorigin="anonymous"></script>
     <script src="detalles-usuario.js"></script>
 </body>
 </html>

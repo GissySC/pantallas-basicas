@@ -1,39 +1,103 @@
+*, body {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: #444; 
-    color: black; 
+    background-color: rgb(180, 234, 234);
+    color: black;
 }
 
 .container {
-    margin: 100px auto;
-    padding: 20px;
-    width: 50vw;
-    background-color: black; 
-    border-radius: 10px;
-    text-align: center; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* 1/4 para los detalles, 3/4 para la galería */
+    width: 80vw;
+    height: 100vh;
+    margin: auto;
+    gap: 20px; /* espacio entre columnas */
 }
 
-.container p {
-    background-color: white; 
-    width: 30vw;
-    padding: 10px;
-    margin: 10px 0;
+.details {
+    background-color: #d3d3d3; /* Fondo gris para los detalles del usuario */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: left;
+
+}
+
+.gallery {
+    background-color: #fff; /* Fondo blanco para la galería */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    overflow-y: auto; /* Permite desplazarse si el contenido es grande */
+}
+
+.card {
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+label {
+    width: 50px;
+    font-weight: bold;
+    background: rgb(92, 224, 224);
+    padding: 12px;
+    margin: 10px auto;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+input {
+    display: none;
+}
+
+#gallery {
+    display: flex;
+    justify-content: space-around;
+}
+
+#gallery img {
+    margin: 10px;
+    width: 250px;
+    height: auto;
+    border: 5px solid #ddd; /* Añadir un borde a las imágenes */
+    border-radius: 5px; /* Borde redondeado */
 }
 
 h1 {
-    color: white; 
+    color: black;
     margin-bottom: 20px;
 }
 
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+#saveImages {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
     .container {
         width: 90%;
+        display: block; /* Cambiar a block para apilar las secciones en pantallas pequeñas */
     }
 
-    .container p {
+    .details, .gallery {
         width: 100%;
+        margin-bottom: 20px; /* Espacio entre las secciones */
     }
-  }
+
+    .details {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #gallery img {
+        width: 90%;
+    }
+}
